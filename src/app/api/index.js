@@ -1,17 +1,37 @@
-const baseURL = "api";
+import { parseObjectToURL } from "../../tools";
+import { baseURL } from "./constants";
 
-const request = async ({
-  url,
-  method = "GET",
-  headers = { "Content-Type": "application/json; charset=utf-8" },
-  body,
-}) => {
-  const response = await fetch(baseURL + url, {
-    headers,
-    method,
-    body: body ? JSON.stringify(body) : null,
-  });
-  return response.data;
+const request = async (endpoint, method = "GET", data = null) => {
+  try {
+    const body = method === "POST" && data ? JSON.stringify(data) : null;
+
+    // eslint-disable-next-line no-param-reassign
+    if (!body) endpoint += parseObjectToURL(data);
+
+    console.log("REQ DATA --- ", data);
+    console.log("REQ URL --- ", endpoint);
+
+    const headers = new Headers();
+    headers.append("Content-Type", "application/json; charset=utf-8");
+    // headers.append('Authorization', `Bearer ${token}`);
+
+    const res = await fetch(baseURL + endpoint, {
+      method,
+      headers,
+      body,
+      // mode: 'cors',
+      // credentials: 'include',
+    });
+
+    const json = await res.json();
+
+    console.log("RESPONSE", json);
+
+    return json;
+  } catch (err) {
+    console.log('API ERROR --- ', err); // eslint-disable-line
+    throw err;
+  }
 };
 
-export { request };
+export default request;
