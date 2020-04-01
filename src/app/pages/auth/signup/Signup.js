@@ -46,7 +46,7 @@ export function Signup() {
         uppercase
         size="lg"
       >
-        Sign up
+        Submit
       </Button>
     </AuthForm>
   );

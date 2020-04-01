@@ -32,7 +32,7 @@ export function Login() {
         uppercase
         size="lg"
       >
-        Log in
+        Submit
       </Button>
     </AuthForm>
   );
