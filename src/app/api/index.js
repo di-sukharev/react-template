@@ -1,4 +1,4 @@
-import { parseObjectToURL } from "../../tools";
+import { parseObjectToURL } from "../../tools/index";
 import { baseURL } from "./constants";
 
 const request = async (endpoint, method = "GET", data = null) => {
