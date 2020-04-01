@@ -21,7 +21,7 @@ export function Signup() {
       initialValues={{ name: "", email: "", phone: "", pass: "" }}
       onSubmit={onSubmit}
     >
-      It won't take more then a minute, come on!
+      It won't take more then a minute, come on ⏱
       <Field
         className={margins.mt}
         id="name"

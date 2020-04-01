@@ -1,5 +1,5 @@
 import { createSlice, createSelector } from "@reduxjs/toolkit";
-import { request } from "../../api";
+import { request } from "../../api/index";
 import { REQUEST_STATUS } from "../../api/constants";
 
 /* 
