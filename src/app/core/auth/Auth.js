@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import { Window, WindowHeader, WindowContent, Tabs, Tab, TabBody } from "react95/dist/prod";
-import { Signup } from "./signup/Signup";
-import { Login } from "./login/Login";
+import { Signup } from "./containers/Signup";
+import { Login } from "./containers/Login";
 import styles from "./Auth.module.css";
 
 export function Auth() {

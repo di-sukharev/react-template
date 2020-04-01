@@ -1,4 +1,4 @@
-import authReducer, { SLICE_NAME as AUTH_SLICE_NAME } from "../pages/auth/slice";
+import authReducer, { SLICE_NAME as AUTH_SLICE_NAME } from "../core/auth/slice";
 
 const rootReducer = {
   [AUTH_SLICE_NAME]: authReducer,
