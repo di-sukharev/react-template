@@ -1,3 +1,3 @@
-import { loggerMiddleware } from "redux-logger";
+import { loggerMiddleware } from "./loggerMiddleware";
 
 export default [loggerMiddleware];
