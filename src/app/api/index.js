@@ -1,7 +1,7 @@
 import { parseObjectToURL } from "../../tools/index";
 import { baseURL } from "./constants";
 
-const request = async (endpoint, method = "GET", data = null) => {
+export const request = async ({ endpoint, method = "GET", data = null }) => {
   try {
     const body = method === "POST" && data ? JSON.stringify(data) : null;
 
@@ -33,5 +33,3 @@ const request = async (endpoint, method = "GET", data = null) => {
     throw err;
   }
 };
-
-export default request;

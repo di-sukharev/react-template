@@ -66,7 +66,7 @@ export const loginStatusSelector = createSelector(loginSelector, state => state.
 export const signupThunk = action => async dispatch => {
   dispatch(signupStart(action));
   try {
-    const res = await request({ url: "/signup", method: "POST", body: action });
+    const res = await request({ endpoint: "/signup", method: "POST", data: action });
     dispatch(signupSuccess(res));
   } catch (err) {
     dispatch(signupFail(err));
@@ -76,7 +76,7 @@ export const signupThunk = action => async dispatch => {
 export const loginThunk = action => async dispatch => {
   dispatch(loginStart(action));
   try {
-    const res = await request({ url: "/login", method: "POST", body: action });
+    const res = await request({ endpoint: "/login", method: "POST", data: action });
     dispatch(loginSuccess(res));
   } catch (err) {
     dispatch(loginFail(err));
