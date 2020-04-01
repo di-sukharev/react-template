@@ -22,13 +22,13 @@ export function Auth() {
           </WindowHeader>
           <WindowContent>
             <Tabs value={activeTab} onChange={handleChange}>
-              <Tab value={0}>LOG IN</Tab>
-              <Tab value={1}>SIGN UP</Tab>
+              <Tab value={0}>SIGN UP</Tab>
+              <Tab value={1}>LOG IN</Tab>
             </Tabs>
             <div>
               <TabBody>
-                {activeTab === 0 && <Login />}
-                {activeTab === 1 && <Signup />}
+                {activeTab === 0 && <Signup />}
+                {activeTab === 1 && <Login />}
               </TabBody>
             </div>
           </WindowContent>

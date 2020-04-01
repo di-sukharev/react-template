@@ -16,7 +16,7 @@ export function Login() {
 
   return (
     <AuthForm label="LOG IN" img={img} initialValues={{ login: "", pass: "" }} onSubmit={onSubmit}>
-      Some beautiful heading
+      {/* Some beautiful heading */}
       <Field className={margins.mt} name="login" type="text" placeholder="Email" as={TextField} />
       <Field
         className={margins.mt}
